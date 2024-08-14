@@ -1,0 +1,231 @@
+.App {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drinks-menu {
+  padding: 40px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+.drinks-menu::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  transform: translateX(50%);
+  width: 80px;
+  height: 80px;
+  background-color: #EFCCB9;
+  border-radius: 50%;
+  display: block;
+}
+
+.drinks-menu-title {
+  font-size: 43px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.drinks-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.drink-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drink-item:hover {
+  background-color: #f2f2f2;
+}
+
+.drink-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.drink-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.drink-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.payment-options-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+.payment-button {
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.payment-vector-div {
+  width: 138px;
+  height: 138px;
+  top: 619px;
+  left: 421px;
+  gap: 0px;
+  border-radius: 50px;
+  opacity: 0px;
+  background: #F5D009;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-vector {
+  width: 78px;
+  height: 78px;
+}
+
+.payment-button.cash {
+  border: 1px solid #F5D009;
+  background: #F5D009;
+}
+
+.payment-button.cash:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-button.card {
+  background: #F3F3F3;
+}
+
+.payment-button.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-button .icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.preparation-screen, .loading-screen, .order-ready-screen {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.preparation-screen-title, .loading-screen-title, .order-ready-screen-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.loading-svg, .order-ready-svg {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-svg svg, .order-ready-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-circle {
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    stroke-dashoffset: 251;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkmark {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: checkmark 0.5s ease-in-out forwards;
+}
+
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.linear-gradient {
+  stroke: url(#grad);
+  stroke-width: 10;
+  fill: none;
+}
